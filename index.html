@@ -6,12 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-
-    <!-- Font type -->
- 
-
-
-
     <title>دليل الرياض</title>
 </head>
 
@@ -19,8 +13,10 @@
 
 <body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
      
     <div class="overlay">
+
     <!-- video -->
     <section>
     <container>
@@ -41,9 +37,17 @@
         <div class="justufy-content">
             <div class="div-father">
                 <div class="touristic-title-div">
-                        <button class="display-all-btn">
-                            <a href="touristic places.html">عرض الكل</a>
-                        </button>
+
+                    <div class="btn-div">
+                    <button type="button" class="btn" style="background-color: #057D8B;">
+                        <a href="touristic places.html">عرض الكل</a>
+                    </button>
+                    <button id="addBtn-1" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                        <a href="adminPage.html">إضافة مكان جديد</a>
+                    </button>
+                    </div>
+                           
+                        
                         <h5>المعالم السياحية</h5>
                 </div>
             </div>
@@ -51,6 +55,7 @@
         <!-- cards -->
       <div class="cards-bg">
         <div class="cards-div">           
+
             <div class="row row-cols-1 row-cols-md-4 g-5">
                 <!-- card-1 -->
                 <div class="col">
@@ -65,107 +70,18 @@
                        
                         <hr>
 
-                        <div class="justify-card-buttom">
-                        <div class="card-bottom">
-                            <p>المزيد</p>
-                            <p><i class="arrow left"></i></p>
-                        </div>
-                        </div>
-                    
-                        </a>
-                    </div>
-                </div>
-                </div>
+                          
+            <div id="container-1" class="row row-cols-1 row-cols-md-4 g-5">
 
 
-                <!-- card-2 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="#">
-                            <img class="img-size" src="https://www.visitsaudi.com/content/dam/saudi-tourism/media/riyadh-articles/the-sky-bridge.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">جسر برج المملكة</p>
-                            <p class="card-text">إطلالة بانورامية تكشف جمال مدينة الرياض</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
-
-
-
-                <!-- card-3 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="#">
-                            <img class="img-size" src="https://pbs.twimg.com/media/FB616RIWEAIEFQ6.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">حافة العالم </p>
-                            <p class="card-text">وجهة مثالية لعشاق تسلق الجبال ورياضة الهايكنج</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
-
-
-                <!-- card-4 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="#">
-                            <img class="img-size" src="https://ar.timeoutriyadh.com/cloud/artimeoutriyadh/2022/06/16/boulevard.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">بوليفارد رياض سيتي</p>
-                            <p class="card-text">أكبر منطقة ترفيهية في العاصمة الرياض</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
             </div>
-        </div>
-  
-         </div>
-         </div>
+        </div> 
+      </div>
+    </div>
     </div>
     </container>
     </section>
     <!-- end touristic-places-->
-
-
-
-
 
 
     <!-- Malls-->
@@ -175,9 +91,15 @@
             <div class="justufy-content">
                 <div class="div-father">
                     <div class="touristic-title-div">
-                            <button class="display-all-btn">
-                                <a href="malls.html">عرض الكل</a>
-                            </button>
+
+                    <div class="btn-div">
+                    <button type="button" class="btn" style="background-color: #057D8B;">
+                        <a href="malls.html">عرض الكل</a>
+                    </button>
+                    <button id="addBtn-2" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                        <a href="adminPage.html">إضافة مكان جديد</a>
+                    </button>
+                    </div>
                             <h5>مراكز التسوق</h5>
                     </div>
                 </div>
@@ -185,6 +107,7 @@
             <!-- cards -->
           <div class="cards-bg">
             <div class="cards-div">           
+
                 <div class="row row-cols-1 row-cols-md-4 g-5">
                     <!-- card-1 -->
                     <div class="col">
@@ -287,10 +210,13 @@
                             </div>
                         </div>
                         </div>
+
+                <div id="container-2"  class="row row-cols-1 row-cols-md-4 g-5">
+
+
                 </div>
             </div>
-      
-             </div>
+          </div>
              </div>
         </div>
         </container>
@@ -307,9 +233,14 @@
             <div class="justufy-content">
                 <div class="div-father">
                     <div class="touristic-title-div">
-                            <button class="display-all-btn">
+                        <div class="btn-div">
+                            <button type="button" class="btn" style="background-color: #057D8B;">
                                 <a href="restaurants.html">عرض الكل</a>
                             </button>
+                            <button id="addBtn-3" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                                <a href="adminPage.html">إضافة مكان جديد</a>
+                            </button>
+                            </div>
                             <h5>المطاعم</h5>
                     </div>
                 </div>
@@ -317,11 +248,14 @@
             <!-- cards -->
           <div class="cards-bg">
             <div class="cards-div">           
+
                 <div class="row row-cols-1 row-cols-md-4 g-5">
                     <!-- card-1 -->
                     <div class="col">
                     <div class="card h-100">
                         <div class="card-content box">
+                          
+                          
                             <a href="مطعم نوزومي.html">
                             <img class="img-size" src="https://media-cdn.tripadvisor.com/media/photo-s/1a/ae/61/3e/caption.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -419,11 +353,14 @@
                             </div>
                         </div>
                         </div>
+
+                <div id="container-3" class="row row-cols-1 row-cols-md-4 g-5">
+                    
+
                 </div>
             </div>
-      
-             </div>
-             </div>
+          </div>
+        </div>
         </div>
         </container>
         </section>
@@ -438,9 +375,14 @@
             <div class="justufy-content">
                 <div class="div-father">
                     <div class="touristic-title-div">
-                            <button class="display-all-btn">
+                        <div class="btn-div">
+                            <button type="button" class="btn" style="background-color: #057D8B;">
                                 <a href="cafes.html">عرض الكل</a>
                             </button>
+                            <button id="addBtn-4" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                                <a href="adminPage.html">إضافة مكان جديد</a>
+                            </button>
+                            </div>
                             <h5>المقاهي</h5>
                     </div>
                 </div>
@@ -448,6 +390,7 @@
             <!-- cards -->
           <div class="cards-bg">
             <div class="cards-div">           
+
                 <div class="row row-cols-1 row-cols-md-4 g-5">
                     <!-- card-1 -->
                     <div class="col">
@@ -550,11 +493,15 @@
                             </div>
                         </div>
                         </div>
+
+                <div id="container-4" class="row row-cols-1 row-cols-md-4 g-5">
+                
+
                 </div>
             </div>
       
-             </div>
-             </div>
+            </div>
+            </div>
         </div>
         </container>
         </section>
@@ -580,16 +527,17 @@
            <div class="container-fluid">
    
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon" ></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+                  </li>
    
                  <li class="nav-item">
                    <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
-                 </li>
-                 <li class="nav-item">
-                   <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
                  </li>
                  <li class="nav-item">
                    <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
@@ -617,3 +565,394 @@
 
 </body>
 </html>
+
+
+
+
+<script>
+
+// localStorage.removeItem("User","Admin");
+// localStorage.setItem("User","Admin");
+
+fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide`, {method: 'GET',})
+  
+  .then((res) => res.json())
+  .then(data => {
+
+
+   if (localStorage.getItem("User") == "Admin"){
+
+
+    // fill touristicPlaces
+
+   let touristicPlaces = data.filter((item) => item.category == "touristic-place")
+    
+   let addBtn = document.getElementById("addBtn-1")
+   addBtn.style.display="inline-block";
+
+   let count =1;
+   for(let i=0;i<touristicPlaces.length;i++){
+    if (count<=4){
+    count+=1;
+    // console.log(count);
+    let container = document.getElementById("container-1")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    // let pageName = touristicPlaces[i].placeName+".html";
+    // console.log(pageName);
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${touristicPlaces[i].placeName}')">  
+                        <img class="img-size" src="${touristicPlaces[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${touristicPlaces[i].placeName}</p>
+                        <p class="card-text">${touristicPlaces[i].shortDes}</p>
+                        </div>
+                        </a>
+                        <hr>
+                        <div class="justify-card-buttom">
+
+                        <div class="card-bottom">
+                            <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                        <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${touristicPlaces[i].id})">حذف</button>
+                        </div>
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+
+
+
+            }//end if 
+            }//end loop
+
+
+    // fill malls
+    let malls = data.filter((item) => item.category == "mall")
+    let addBtn2 = document.getElementById("addBtn-2")
+    addBtn2.style.display="inline-block";
+    // console.log(touristicPlaces);
+
+   let count2 =1;
+   for(let i=0;i<malls.length;i++){
+    if (count2<=4){
+    count2+=1;
+    // console.log(count);
+    let container = document.getElementById("container-2")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${malls[i].placeName}')">  
+                        <img class="img-size" src="${malls[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${malls[i].placeName}</p>
+                        <p class="card-text">${malls[i].shortDes}</p>
+                        </div>
+                        </a>
+                        <hr>
+
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                        <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${malls[i].id})">حذف</button>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+
+
+    //fill restaurants
+    let restaurants = data.filter((item) => item.category == "restaurant")
+    let addBtn3 = document.getElementById("addBtn-3")
+    addBtn3.style.display="inline-block";
+    // console.log(touristicPlaces);
+
+   let count3 =1;
+   for(let i=0;i<restaurants.length;i++){
+    if (count3<=4){
+    count3+=1;
+    // console.log(count);
+    let container = document.getElementById("container-3")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${restaurants[i].placeName}')">  
+                        <img class="img-size" src="${restaurants[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${restaurants[i].placeName}</p>
+                        <p class="card-text">${restaurants[i].shortDes}</p>
+                        </div>
+                        </a>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                        <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${restaurants[i].id})">حذف</button>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+
+    //fill cafes
+    let cafes = data.filter((item) => item.category == "cafe")
+    let addBtn4 = document.getElementById("addBtn-4")
+    addBtn4.style.display="inline-block";
+    // console.log(touristicPlaces);
+
+   let count4 =1;
+   for(let i=0;i<cafes.length;i++){
+    if (count4<=4){
+    count4+=1;
+    // console.log(count);
+    let container = document.getElementById("container-4")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${cafes[i].placeName}')">  
+                        <img class="img-size" src="${cafes[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${cafes[i].placeName}</p>
+                        <p class="card-text">${cafes[i].shortDes}</p>
+                        </div>
+                        </a>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                        <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${cafes[i].id})">حذف</button>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+   }else {
+
+    let touristicPlaces = data.filter((item) => item.category == "touristic-place")
+
+   let count =1;
+   for(let i=0;i<touristicPlaces.length;i++){
+    if (count<=4){
+    count+=1;
+
+    let container = document.getElementById("container-1")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${touristicPlaces[i].placeName}')">  
+                        <img class="img-size" src="${touristicPlaces[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${touristicPlaces[i].placeName}</p>
+                        <p class="card-text">${touristicPlaces[i].shortDes}</p>
+                        </div>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p>المزيد</p>
+                            <p><i class="arrow left"></i></p>
+                        </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+
+
+    let malls = data.filter((item) => item.category == "mall")
+    // console.log(touristicPlaces);
+
+   let count2 =1;
+   for(let i=0;i<malls.length;i++){
+    if (count2<=4){
+    count2+=1;
+    // console.log(count);
+    let container = document.getElementById("container-2")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${malls[i].placeName}')">  
+                        <img class="img-size" src="${malls[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${malls[i].placeName}</p>
+                        <p class="card-text">${malls[i].shortDes}</p>
+                        </div>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p>المزيد</p>
+                            <p><i class="arrow left"></i></p>
+                        </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+
+
+
+    let restaurants = data.filter((item) => item.category == "restaurant")
+    // console.log(touristicPlaces);
+
+   let count3 =1;
+   for(let i=0;i<restaurants.length;i++){
+    if (count3<=4){
+    count3+=1;
+    // console.log(count);
+    let container = document.getElementById("container-3")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${restaurants[i].placeName}')">  
+                        <img class="img-size" src="${restaurants[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${restaurants[i].placeName}</p>
+                        <p class="card-text">${restaurants[i].shortDes}</p>
+                        </div>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p>المزيد</p>
+                            <p><i class="arrow left"></i></p>
+                        </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+
+
+
+    let cafes = data.filter((item) => item.category == "cafe")
+    // console.log(touristicPlaces);
+
+   let count4 =1;
+   for(let i=0;i<cafes.length;i++){
+    if (count4<=4){
+    count4+=1;
+    // console.log(count);
+    let container = document.getElementById("container-4")
+    let box = document.createElement("div")
+    box.classList.add("card-content")
+    box.innerHTML=
+       `<div class="col">
+                <div class="card h-100">
+                    <div class="card-content box">
+                        <a href="#" onclick="openPage('${cafes[i].placeName}')">  
+                        <img class="img-size" src="${cafes[i].placeImg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-title">${cafes[i].placeName}</p>
+                        <p class="card-text">${cafes[i].shortDes}</p>
+                        </div>
+                        <hr>
+                        <div class="justify-card-buttom">
+                        <div class="card-bottom">
+                            <p>المزيد</p>
+                            <p><i class="arrow left"></i></p>
+                        </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                </div>`;
+
+                container.appendChild(box);
+            }//end if 
+            }//end loop
+   }
+  })
+
+
+
+  function deletePlace(id){
+
+fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide/${id}`, {method: 'DELETE',})
+
+.then((res) => res.json())
+.then(data => {console.log("delete success");})
+
+}
+
+
+function openPage(placeName) {
+  let url = placeName + ".html"; 
+  window.open(url);
+}
+
+
+function logOut(){
+  localStorage.removeItem("User");
+}
+
+
+
+// function createNewPage() {
+//     console.log("arwaaaa");
+//   var newPage = document.createElement('div');
+//   newPage.className = 'new-page';
+//   newPage.style.backgroundColor = 'blue'; 
+//   newPage.innerHTML=`<h1>arwa<h1>`;
+// //   document.body.appendChild(newPage);
+//   window.open( newPage);
+// }
+
+
+
+
+</script>
