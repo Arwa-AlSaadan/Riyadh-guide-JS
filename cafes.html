@@ -11,6 +11,8 @@
 
 <body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
      <!-- nav-bar -->
      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-color-spec ">
         <div class="container-fluid">
@@ -22,11 +24,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
               </li>
@@ -58,133 +62,40 @@
         <!-- div-img -->
 
 
- 
-
+        <div style="height: 3rem;"></div>
         <!-- Cafes -->
         <section>
-            <container>
-            <div class="touristic">
-                <div class="justufy-content">
-                    <div class="div-father">
-                        <div class="touristic-title-div-spec">
-                                <h5>المقاهي</h5>
-                        </div>
-                    </div>
+          <container>
+          <div class="touristic">
+              <div class="justufy-content">
+                  <div class="div-father">
+                      <div class="touristic-title-div">
+                          <div class="btn-div">
+                              <button id="addBtn-4" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                                  <a href="adminPage.html">إضافة مكان جديد</a>
+                              </button>
+                              </div>
+                              <h5>المقاهي</h5>
+                      </div>
+                  </div>
+      
+              <!-- cards -->
+            <div class="cards-bg">
+              <div class="cards-div">           
+                  <div id="container-4" class="row row-cols-1 row-cols-md-4 g-5">
+                  
+                  </div>
+              </div>
         
-                <!-- cards -->
-              <div class="cards-bg">
-                <div class="cards-div">           
-                    <div class="row row-cols-1 row-cols-md-4 g-5">
-                        <!-- card-1 -->
-                        <div class="col">
-                        <div class="card h-100">
-                            <div class="card-content box">
-                                <a href="#">
-                                <img class="img-size" src="https://lh3.googleusercontent.com/p/AF1QipN7E9xhbbRjCU8MKYh5qK7ODLHW8vUM7YWIFSk3=w768-h768-n-o-k-v1" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <p class="card-title">مقهى اوت اوف لاين</p>
-                                <p class="card-text">يتميز المقهى بالديكور الجميل والجلسات الخارجية والسعر الرائع</p>
-                                </div>
-                               
-                                <hr>
-        
-                                <div class="justify-card-buttom">
-                                <div class="card-bottom">
-                                    <p>المزيد</p>
-                                    <p><i class="arrow left"></i></p>
-                                </div>
-                                </div>
-                            
-                                </a>
-                            </div>
-                        </div>
-                        </div>
-        
-        
-                        <!-- card-2 -->
-                        <div class="col">
-                            <div class="card h-100">
-                                <div class="card-content box">
-                                    <a href="#">
-                                    <img class="img-size" src="https://static.hiamag.com/inline-images/%D9%88%D8%A7%D9%84%D8%AD%D9%84%D9%89%20%D8%A8%D9%85%D8%B0%D8%A7%D9%82%20%D9%81%D8%B1%D9%8A%D8%AF.JPG" class="card-img-top" alt="...">
-            
-                                    <div class="card-body">
-                                    <p class="card-title">مقهى هانوفيرين</p>
-                                    <p class="card-text">وجهة مثالية للاسترخاء وقضاء وقت ممتع في أجواء مريحة وساحرة</p>
-                                    </div>
-            
-                                    <hr>
-                                    <div class="justify-card-buttom">
-                                    <div class="card-bottom">
-                                        <p>المزيد</p>
-                                        <p><i class="arrow left"></i></p>
-                                    </div>
-                                    </div>
-                                    </a>
-                                </div>
-                            </div>
-                            </div>
-        
-        
-        
-                        <!-- card-3 -->
-                        <div class="col">
-                            <div class="card h-100">
-                                <div class="card-content box">
-                                    <a href="#">
-                                    <img class="img-size" src="https://pbs.twimg.com/media/E3MmcDYXwAMLiND?format=jpg&name=medium" class="card-img-top" alt="...">
-            
-                                    <div class="card-body">
-                                    <p class="card-title">مقهى قونيا</p>
-                                    <p class="card-text">واحة من الهدوء والأجواء الرائعة في قلب المدينة</p>
-                                    </div>
-            
-                                    <hr>
-                                    <div class="justify-card-buttom">
-        
-                                    <div class="card-bottom">
-                                        <p>المزيد</p>
-                                        <p><i class="arrow left"></i></p>
-                                    </div>
-                                    </div>
-                                    </a>
-                                </div>
-                            </div>
-                            </div>
-        
-        
-                        <!-- card-4 -->
-                        <div class="col">
-                            <div class="card h-100">
-                                <div class="card-content box">
-                                    <a href="#">
-                                    <img class="img-size" src="https://pbs.twimg.com/media/EbnGIl1XQAAmY_w?format=jpg&name=900x900" class="card-img-top" alt="...">
-            
-                                    <div class="card-body">
-                                    <p class="card-title">مقهى ايرث</p>
-                                    <p class="card-text">مكان ساحر يجمع بين أجواء الطبيعة الهادئة وتجربة القهوة المميزة </p>
-                                    </div>
-            
-                                    <hr>
-                                    <div class="justify-card-buttom">
-                                    <div class="card-bottom">
-                                        <p>المزيد</p>
-                                        <p><i class="arrow left"></i></p>
-                                    </div>
-                                    </div>
-                                    </a>
-                                </div>
-                            </div>
-                            </div>
-                    </div>
-                </div>
-          
-                 </div>
-                 </div>
-            </div>
-            </container>
-            </section>
-            <!-- end Cafes-->
+              </div>
+              </div>
+          </div>
+          </container>
+          </section>
+  
+
+
+       <!-- end Cafes-->
 
 
        
@@ -199,3 +110,129 @@
 
 </body>
 </html>
+
+
+<script>
+
+  // localStorage.setItem("User","Admin");
+  
+  fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide`, {method: 'GET',})
+    
+    .then((res) => res.json())
+    .then(data => {
+  
+  
+     if (localStorage.getItem("User") == "Admin"){
+  
+      // fill cafes
+  
+      let cafes = data.filter((item) => item.category == "cafe")
+      
+     let addBtn = document.getElementById("addBtn-4")
+     addBtn.style.display="inline-block";
+  
+     for(let i=0;i<cafes.length;i++){
+     
+      let container = document.getElementById("container-4")
+      let box = document.createElement("div")
+      box.classList.add("card-content")
+      box.innerHTML=
+         `<div class="col">
+                  <div class="card h-100">
+                      <div class="card-content box">
+                          <a href="#" onclick="openPage('${cafes[i].placeName}')">  
+                          <img class="img-size" src="${cafes[i].placeImg}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                          <p class="card-title">${cafes[i].placeName}</p>
+                          <p class="card-text">${cafes[i].shortDes}</p>
+                          </div>
+                          </a>
+                          <hr>
+                          <div class="justify-card-buttom">
+  
+                          <div class="card-bottom">
+                              <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                          <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${cafes[i].id})">حذف</button>
+                          </div>
+                          
+                          </div>
+                         
+                      </div>
+                  </div>
+                  </div>`;
+  
+                  container.appendChild(box);
+
+              }//end loop
+  
+     }else {
+  
+     let cafes = data.filter((item) => item.category == "cafe")
+  
+     for(let i=0;i<cafes.length;i++){
+      // console.log(count);
+      let container = document.getElementById("container-4")
+      let box = document.createElement("div")
+      box.classList.add("card-content")
+      box.innerHTML=
+         `<div class="col">
+                  <div class="card h-100">
+                      <div class="card-content box">
+                          <a href="#" onclick="openPage('${cafes[i].placeName}')">  
+                          <img class="img-size" src="${cafes[i].placeImg}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                          <p class="card-title">${cafes[i].placeName}</p>
+                          <p class="card-text">${cafes[i].shortDes}</p>
+                          </div>
+                          <hr>
+                          <div class="justify-card-buttom">
+                          <div class="card-bottom">
+                              <p>المزيد</p>
+                              <p><i class="arrow left"></i></p>
+                          </div>
+                          </div>
+                          </a>
+                      </div>
+                  </div>
+                  </div>`;
+  
+                  container.appendChild(box);
+              }//end loop
+              }//end
+     
+    })
+  
+  
+  
+    function deletePlace(id){
+  
+  fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide/${id}`, {method: 'DELETE',})
+  
+  .then((res) => res.json())
+  .then(data => {console.log("delete success");})
+  
+  }
+  
+
+  function openPage(placeName) {
+  let url = placeName + ".html"; 
+  window.open(url);
+}
+
+
+let checkLogin = localStorage.getItem("User");
+
+if(checkLogin == null){
+  window.location.href="register.html";
+}else{
+  console.log("Login");
+  // let welcomeName = document.getElementById("welcomeName")
+  // welcomeName.innerText= `Welcome ${localStorage.getItem("User")}`;
+}
+
+
+function logOut(){
+  localStorage.removeItem("User");
+}
+
+  </script>

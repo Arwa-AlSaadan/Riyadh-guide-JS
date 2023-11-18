@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>إضافة مكان جديد</title>
+
+</head>
+
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+     <!-- nav-bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-color-spec ">
+        <div class="container-fluid">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+                  </li>
+
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <a class="navbar-brand" href="#">
+                  <img src="logo.png" alt="Logo" width="120" height="50" class="d-inline-block align-text-top">
+            
+                  </a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- End nav -->
+
+   
+
+      <!-- Form -->
+      <div class="contact-div">
+        <div class="title">
+            <p class="text-center" style="color: #057D8B;">إضافة مكان جديد</p>
+
+        </div>
+      </div>
+
+        <div class="div-bg">
+        <div class="content">
+            <div class="addInfo">
+            <!-- <form> -->
+                <select class="form-select" aria-label="Default select example" style="margin-bottom: 20px;">
+                    <option selected>تصنيف المكان </option>
+                    <option value="touristic-place">معلم سياحي</option>
+                    <option value="mall">مركز تسوق</option>
+                    <option value="restaurant">مطعم</option>
+                    <option value="cafe">مقهى</option>
+                </select>
+          
+
+                <div class="mb-3">
+                  <input placeholder="اسم المكان" class="form-control" id="placeName" style="height: 50px;">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="صورة للمكان (url)" class="form-control" id="placeImg" style="height: 50px;">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="وصف مختصر" class="form-control" id="shortDes" style="height: 50px;">
+                </div>
+                <div class="input-group mb-3">
+                    <textarea placeholder="وصف مطوّل" id="longDes" class="form-control" aria-label="With textarea" style="height: 30vh;"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input placeholder="وقت الدخول" class="form-control" id="time" style="height: 50px;">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="تاريخ الدخول" class="form-control" id="available" style="height: 50px;">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="قيمة الدخول" class="form-control" id="price" style="height: 50px;">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="موقع المكان (barcode)" class="form-control" id="location" style="height: 50px;">
+                </div>
+
+
+                <div class="btn-contavt-div">
+                    <div class="btn-contavt-div-div" style="display: flex;justify-content: center;">
+                    <button id="addBtn" class="btn btn-primary btn-m  mt-3">
+                      <!-- <a href="restaurants.html">إضافة</a> -->
+                      إضافة
+                    </button>
+                    </div>
+                </div>
+
+              <!-- </form> -->
+            </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      <!-- end form -->
+  
+
+      <!-- Footer -->
+      <div class="footer">    
+        <div class="footer-div">
+        <img class="footer-img" src="footer.jpg">  
+        <div class="copyright-div"><p>© 2023 Copyright</p></div>
+      </div>
+      </div>
+      <!-- End footer -->
+
+</body>
+</html>
+
+
+<script>
+
+    let selectElement = document.querySelector('.form-select')
+    let placeName = document.getElementById("placeName")
+    let placeImg = document.getElementById("placeImg")
+    let shortDes = document.getElementById("shortDes")
+    let longDes = document.getElementById("longDes")
+    let time = document.getElementById("time")
+    let available = document.getElementById("available")
+    let price = document.getElementById("price")
+    let barcode = document.getElementById("location")
+
+    let addBtn = document.getElementById("addBtn")
+
+
+    addBtn.addEventListener("click",()=>{
+
+       fetch("https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide", {
+       method: 'POST',
+       body: JSON.stringify({
+
+           category : selectElement.value,
+           placeName : placeName.value,
+           placeImg: placeImg.value,
+           shortDes: shortDes.value,
+           longDesc: longDes.value,
+           time: time.value,
+           available: available.value,
+           price: price.value,
+           barcode : barcode.value,
+      }),
+       headers: {
+           'Content-type': 'application/json; charset=UTF-8',
+       },
+    })
+
+       .then((response) => response.json())
+       .then((data) =>{  
+        window.location.href="index.html"
+       })
+       .catch(err => console.log(err));
+
+    })
+
+
+
+    let checkAdmin = localStorage.getItem("User");
+
+    if(checkAdmin == "Admin"){
+     console.log("It is admin");
+    }else{
+        window.location.href="index.html";
+    // let welcomeName = document.getElementById("welcomeName")
+    // welcomeName.innerText= `Welcome ${localStorage.getItem("User")}`;
+    }
+
+
+    function logOut(){
+  localStorage.removeItem("User");
+}
+
+</script>
+
+
+
