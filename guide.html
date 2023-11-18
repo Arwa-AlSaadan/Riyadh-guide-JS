@@ -11,6 +11,8 @@
 
 <body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
      <!-- nav-bar -->
      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-color-spec ">
         <div class="container-fluid">
@@ -22,11 +24,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
               </li>
@@ -60,9 +64,7 @@
 
       <div class="guide-grid-div">
       <div class="guide-grid">
-        <div class="guide-left-part">
-          <img class="guide-img" src="https://media.istockphoto.com/id/1423568960/photo/riyadh-roads-and-streets-are-filled-with-ornamental-trees-on-both-sides-of-the-road-downtown.jpg?b=1&s=612x612&w=0&k=20&c=f_rfLgXEpddXlK3u5PSDiFcJ_j4OQ5j9tnopm8lY8mk=">
-        </div>
+        
 
 
         <div class="guide-right-part">
@@ -71,6 +73,9 @@
             </div>
         </div>
         
+        <div class="guide-left-part">
+          <img class="guide-img" src="https://media.istockphoto.com/id/1423568960/photo/riyadh-roads-and-streets-are-filled-with-ornamental-trees-on-both-sides-of-the-road-downtown.jpg?b=1&s=612x612&w=0&k=20&c=f_rfLgXEpddXlK3u5PSDiFcJ_j4OQ5j9tnopm8lY8mk=">
+        </div>
         
 
 
@@ -94,3 +99,9 @@
 
 </body>
 </html>
+
+<script>
+  function logOut(){
+  localStorage.removeItem("User");
+}
+</script>

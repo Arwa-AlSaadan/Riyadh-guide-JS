@@ -12,6 +12,8 @@
 
 <body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
      <!-- nav-bar -->
      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-color-spec ">
         <div class="container-fluid">
@@ -23,11 +25,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
               </li>
@@ -57,137 +61,44 @@
         </div> 
         </container>
         </section>
-        <!-- div-img -->
+      <!-- div-img -->
 
-
-    <!-- touristic-places-->
+      <div style="height: 3rem;"></div>
+      <!-- touristic-places-->
     <section>
-    <container>
-    <div class="touristic">
-        <div class="justufy-content">
-            <div class="div-father">
-                <div class="touristic-title-div-spec">
-                        <h5>المعالم السياحية</h5>
-                </div>
-            </div>
-
-        <!-- cards -->
-      <div class="cards-bg">
-        <div class="cards-div">           
-            <div class="row row-cols-1 row-cols-md-4 g-5">
-                <!-- card-1 -->
-                <div class="col">
-                <div class="card h-100">
-                    <div class="card-content box">
-                        <a href="details.html">
-                        <img class="img-size" src="https://pbs.twimg.com/media/F9X-fo8WUAAJRcx?format=jpg&name=large" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <p class="card-title">مطل البجيري</p>
-                        <p class="card-text">تجربة استثنائية تبدأ بالمطاعم الفاخرة وتكتمل بالمعالم الثقافية والتراثية</p>
-                        </div>
-                       
-                        <hr>
-
-                        <div class="justify-card-buttom">
-                        <div class="card-bottom">
-                            <p>المزيد</p>
-                            <p><i class="arrow left"></i></p>
-                        </div>
-                        </div>
-                    
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-
-                <!-- card-2 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="arwa.html">
-                            <img class="img-size" src="https://www.visitsaudi.com/content/dam/saudi-tourism/media/riyadh-articles/the-sky-bridge.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">جسر برج المملكة</p>
-                            <p class="card-text">إطلالة بانورامية تكشف جمال مدينة الرياض</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
-
-
-
-                <!-- card-3 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="arwa.html">
-                            <img class="img-size" src="https://pbs.twimg.com/media/FB616RIWEAIEFQ6.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">حافة العالم </p>
-                            <p class="card-text">وجهة مثالية لعشاق تسلق الجبال ورياضة الهايكنج</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
-
-
-                <!-- card-4 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-content box">
-                            <a href="arwa.html">
-                            <img class="img-size" src="https://ar.timeoutriyadh.com/cloud/artimeoutriyadh/2022/06/16/boulevard.jpg" class="card-img-top" alt="...">
-    
-                            <div class="card-body">
-                            <p class="card-title">بوليفارد رياض سيتي</p>
-                            <p class="card-text">أكبر منطقة ترفيهية في العاصمة الرياض</p>
-                            </div>
-    
-                            <hr>
-                            <div class="justify-card-buttom">
-                            <div class="card-bottom">
-                                <p>المزيد</p>
-                                <p><i class="arrow left"></i></p>
-                            </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </div>
+      <container>
+      <div class="touristic">
+          <div class="justufy-content">
+              <div class="div-father">
+                  <div class="touristic-title-div">
+                      <div class="btn-div">
+                      <button id="addBtn-1" type="button" class="btn" style="background-color: #057D8B; margin-left: 10px; display:none;">
+                          <a href="adminPage.html">إضافة مكان جديد</a>
+                      </button>
+                      </div>
+                             
+                          
+                          <h5>المعالم السياحية</h5>
+                  </div>
+              </div>
   
-         </div>
-         </div>
-    </div>
-    </container>
-    </section>
+          <!-- cards -->
+        <div class="cards-bg">
+          <div class="cards-div">           
+              <div id="container-1" class="row row-cols-1 row-cols-md-4 g-5">
+  
+              </div>
+          </div> 
+        </div>
+      </div>
+      </div>
+      </container>
+      </section>
     <!-- end touristic-places-->
 
 
 <!-- Footer -->
+<div style="height: 15rem;"></div>
 <div class="footer">    
   <div class="footer-div">
   <img class="footer-img" src="footer.jpg">  
@@ -199,3 +110,127 @@
 
 </body>
 </html>
+
+<script>
+
+  // localStorage.setItem("User","Admin");
+  
+  fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide`, {method: 'GET',})
+    
+    .then((res) => res.json())
+    .then(data => {
+  
+  
+     if (localStorage.getItem("User") == "Admin"){
+  
+      // fill touristicPlaces
+  
+     let touristicPlaces = data.filter((item) => item.category == "touristic-place")
+      
+     let addBtn = document.getElementById("addBtn-1")
+     addBtn.style.display="inline-block";
+  
+     for(let i=0;i<touristicPlaces.length;i++){
+     
+      let container = document.getElementById("container-1")
+      let box = document.createElement("div")
+      box.classList.add("card-content")
+      box.innerHTML=
+         `<div class="col">
+                  <div class="card h-100">
+                      <div class="card-content box">
+                          <a href="#" onclick="openPage('${touristicPlaces[i].placeName}')">  
+                          <img class="img-size" src="${touristicPlaces[i].placeImg}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                          <p class="card-title">${touristicPlaces[i].placeName}</p>
+                          <p class="card-text">${touristicPlaces[i].shortDes}</p>
+                          </div>
+                          </a>
+                          <hr>
+                          <div class="justify-card-buttom">
+  
+                          <div class="card-bottom">
+                              <p><a href="details.html" style=" color: #057D8B;">المزيد</a></p>
+                          <button type="button" class="btn-sm" id="del-btn" onclick="deletePlace(${touristicPlaces[i].id})">حذف</button>
+                          </div>
+                          
+                          </div>
+                         
+                      </div>
+                  </div>
+                  </div>`;
+  
+                  container.appendChild(box);
+
+              }//end loop
+  
+     }else {
+  
+      let touristicPlaces = data.filter((item) => item.category == "touristic-place")
+  
+     for(let i=0;i<touristicPlaces.length;i++){
+      // console.log(count);
+      let container = document.getElementById("container-1")
+      let box = document.createElement("div")
+      box.classList.add("card-content")
+      box.innerHTML=
+         `<div class="col">
+                  <div class="card h-100">
+                      <div class="card-content box">
+                          <a href="#" onclick="openPage('${touristicPlaces[i].placeName}')">  
+                          <img class="img-size" src="${touristicPlaces[i].placeImg}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                          <p class="card-title">${touristicPlaces[i].placeName}</p>
+                          <p class="card-text">${touristicPlaces[i].shortDes}</p>
+                          </div>
+                          <hr>
+                          <div class="justify-card-buttom">
+                          <div class="card-bottom">
+                              <p>المزيد</p>
+                              <p><i class="arrow left"></i></p>
+                          </div>
+                          </div>
+                          </a>
+                      </div>
+                  </div>
+                  </div>`;
+  
+                  container.appendChild(box);
+              }//end loop
+              }//end
+     
+    })
+  
+  
+  
+    function deletePlace(id){
+  
+  fetch(`https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide/${id}`, {method: 'DELETE',})
+  
+  .then((res) => res.json())
+  .then(data => {console.log("delete success");})
+  
+  }
+  
+  function openPage(placeName) {
+  let url = placeName + ".html"; 
+  window.open(url);
+}
+
+
+
+let checkLogin = localStorage.getItem("User");
+
+if(checkLogin == null){
+  window.location.href="register.html";
+}else{
+  console.log("Login");
+  // let welcomeName = document.getElementById("welcomeName")
+  // welcomeName.innerText= `Welcome ${localStorage.getItem("User")}`;
+}
+
+function logOut(){
+  localStorage.removeItem("User");
+}
+
+  </script>
