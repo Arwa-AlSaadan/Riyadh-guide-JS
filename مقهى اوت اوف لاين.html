@@ -27,6 +27,40 @@
     width: 100%;
   }
 
+  @media (min-width: 1200px) {
+
+
+  .grid-container {
+    margin-left: 6rem;
+    grid-template-columns: auto auto;
+
+  
+  }
+  
+
+
+}
+@media (max-width: 768px) {
+
+
+  .grid-container {
+    margin-left: 2rem;
+    grid-template-columns: auto;
+
+
+  }
+
+  .custom-container,
+  .custom-container1 {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+
+}
+
+
+
   .align-justify{
     text-align: justify;
   }
@@ -39,6 +73,12 @@
     
     /* justify-content: space-evenly; */
   }
+  @media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
   .flex-col {
     flex-direction: row;
     
@@ -172,7 +212,8 @@ height: 10rem;
     text-align: right;
 }
 .star-img{
-    height: 10rem;
+    height: 3rem;
+    /* margin-top: 4rem; */
   
 }
 .star-img1{
@@ -190,7 +231,8 @@ height: 10rem;
     margin-left: 2rem;
     margin-top: 1em;
 }
-.rec {
+/* .rec {
+ 
     height: 10em;
     width: 32em;
     background-color: #f5f6f7ce;
@@ -198,9 +240,30 @@ height: 10rem;
     align-items: center;
     border-radius: 25px;
    margin-top: -50px;
+} */
+
+.rec {
+  background-color: #f5f6f7ce;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  margin-top: -50px;
+  padding: 1em;
+  max-width: 100%;
+  width: 32em;
+  border: none;
 }
 
-.btn {
+
+@media (max-width: 768px) {
+  .rec {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* .btn {
     display: flex;
     width: 9em;
     height: 3em;
@@ -209,6 +272,32 @@ height: 10rem;
     margin-left: 10rem;
     border-radius: 30px;
    
+} */
+
+.btn {
+  display: flex;
+  width: 9em;
+  height: 3em;
+  align-items: center;
+  background-color: #54A6B0;
+  margin-left: 10rem;
+  border-radius: 30px;
+  margin-bottom: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .btn {
+    margin-left: 10rem;
+  }
 }
 .line {
     /* color: rgb(20, 24, 21); */
@@ -286,6 +375,19 @@ height: 10rem;
 }
 .top1 {
 margin-top:-20px;
+border: none;
+
+}
+
+.col-1{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+
+  /* margin-top: 7rem; */
+  align-items:center;
+  height: 9rem;
+  width: 6rem;
 }
 
 
@@ -330,26 +432,26 @@ margin-top:-20px;
       <!-- End nav -->
       
 <div class="container mt-5 " style="width: 70%;">
-    <p class="topic h5 pt-4">مطل البجيري</p>
+    <p id="placeName" class="topic h5 pt-4"></p>
     <div class="row">
        
         <div class="col-sm-4">
-            <!--Nested rows within a column-->
+          
             <div class="row">
                 <div class="col-12">
                     <div class="sidebar-content color1"> 
                          <div>
                          <div class="flex-col ">
                             <div class="flex-row ">
-                                <p style="  padding-left: 8rem;">4pm - 12am</p>
+                                <p id="time" style="  padding-left: 8rem;"></p>
                                 <i class="fas fa-clock pt-1" style=" padding-right:30px;"></i> 
                             </div>
             <dive class="flex-col">
             <div class="flex-row ">
-                <p style="  padding-left: 8rem;">مفتوح طوال العام </p>
+                <p id="open" style="  padding-left: 8rem;"></p>
                 <i class="fas fa-calendar-alt" style=" padding-right:30px;"></i> 
             </div>
-            <!-- fas fa-clock clock -->
+           
          
             </div>
                         
@@ -359,7 +461,7 @@ margin-top:-20px;
             <div class="col-12">
                     <div class="sidebar-content color1"> 
                         <div class="flex-row p-5">
-                <p>50 ريال للشخص الواحد</p>
+                <p id="price"></p>
                 <i class="fas fa-money-bill pt-1"></i>
             </div></div>
               
@@ -368,7 +470,7 @@ margin-top:-20px;
                     <div class="sidebar-content color1 ">
                         <div class="flex-col">
                             <p class="text-right">:الموقع</p>
-                        <img class="img1" src="https://search.mandumah.com/QRCode/Show?text=%D8%AD%D9%8A+%D8%A7%D9%84%D8%A8%D8%AC%D9%8A%D8%B1%D9%8A+%D9%81%D9%8A+%D8%A7%D9%84%D8%AF%D8%B1%D8%B9%D9%8A%D8%A9+%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A%D8%A9%3A+%D8%A5%D8%B7%D9%84%D8%A7%D9%84%D8%A9+%D8%B9%D9%84%D9%89+%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A...%0A%D8%B9%D8%B7%D9%8A%D8%A9%D8%8C+%D8%B9%D8%A8%D9%88%D8%AF+%D8%B7%D9%84%D8%B9%D8%AA%2C+%0A%D9%85%D8%AC%D9%84%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%81%D9%84%D8%A9%0Ahttp%3A%2F%2Fsearch.mandumah.com%2FRecord%2F689896&level=L&size=3&margin=4" alt="">
+                        <img id="img3" class="img1" src="" alt="">
                         </div>
                     </div>
               
@@ -382,8 +484,8 @@ margin-top:-20px;
                 <div class="custom-container">
                  <div class="p-3 "> 
                    
-                     <img class="img" src="https://ar.timeoutriyadh.com/cloud/artimeoutriyadh/2022/09/01/Bujairi-Terrace-1024x768-1.jpg"  alt="" style="padding-top: 2em; padding-bottom: 2em;">
-                <p class=" mt-4 text-align right-txt1 ">يعد مطل البجيري وجهتك الفاخر، للانغماس في تجربة راقية بالقرب من وادي حنيفة، حيث تغمر حواسك مذاقات عالمية حاصلة على نجمة ميشلان، في أربعة مطاعم، ما بين مأكولات إيطالية، وفرنسية، وإسبانية، وأمريكية، كما يستضيف المطل عددًا من المطاعم التي تفتح أبوابها لأول مرة في الشرق الأوسط، مثل: وماستروز، وبرونو، إضافة إلى كافيه دو ليسبلانداد، كما يمكنك اكتشاف لذة أطباق سعودية تراثية مقدمة بطريقة عصرية في مطعم تكية</p>
+                     <img id="img10" class="img" src=""  alt="" style="padding-top: 2em; padding-bottom: 2em;">
+                <p id="longDesc" class=" mt-4 text-align right-txt1 "> </p>
           </div>
             </div>
         </div>
@@ -397,7 +499,7 @@ margin-top:-20px;
                     <div class="container text-center mb-5">
                         <div class="row">
                           <div class="col-8 "style="border-right: 1px solid black">
-                            <!-- style="border: 1px solid red" -->
+                         
                             <div class="container text-center">
                                 <div class="row">
                                   <div class="row">
@@ -429,10 +531,12 @@ margin-top:-20px;
                                     <div class="div-col">
                                       <div class="div-row1">
                                           <div class="div-col">
-                                              <P style="margin-top: 20px;">سعد</P>
-                                              <div>
-                                           <img class="star-img1" style="margin-top: -3em;" src="star-removebg-preview.png" alt="" style="border: 1px solid red">
-                                           <p class="top1">روعه لايفوتكم</p>
+                                              <P id="text" style="margin-top: 20px;">سعد</P>
+                                              <div class="col-1">
+                                           <img id="starImage" class="star-img1" style="margin-top: -3em; height: 30px; width: 90px; margin-top: 1px;" src="default-star.png" alt="" style="border: 1px solid red">
+                                           <!-- <p class="top1">روعه لايفوتكم</p> -->
+                                           <p id="displayComments" class="top1"></p>
+                                           <p id="displayRate" class="top1"></p>
                                           </div>
                                           </div>
   
@@ -454,8 +558,15 @@ margin-top:-20px;
                                     <div class="div-col">
                                 
                                     <h5 style="text-align: right;">التعليقات</h5>
-                                    <p class="rec"></p>
-                                    <button class="btn"><p class="white-txt">ارسال</p>
+                                    <div><input  id ="comments"type="text" class="rec"></div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div><input  id ="rate"type="text"  class="rec"></div>
+                                    <button id="submitBtn" class="btn"><p class="white-txt">ارسال</p>
+                                      <div>
+                                      
+                                      </div>
 
                                     </button>
                                     
@@ -503,4 +614,97 @@ margin-top:-20px;
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
 </body>
+
+<script>
+let text = document.getElementById("text");
+  text.innerHTML=`  ${localStorage.getItem("username")} ! `
+  </script>
+  
+
+<script>
+
+
+
+// let container = document.getElementById("container-1")
+//     let box = document.createElement("div")
+
+
+fetch("https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide")
+
+        .then(response => response.json())
+        .then(data => {
+          let bujairi = data.find((item) => item.placeName == "مقهى اوت اوف لاين ")
+          console.log( bujairi);
+  
+      let time1 = document.getElementById("time")
+      time1.innerText= bujairi.time
+      let open = document.getElementById("open")
+      open.innerText = bujairi.available
+
+      let name = document.getElementById("placeName")
+      name.innerText =  bujairi.placeName
+
+      let price  = document.getElementById("price")
+      price.innerText = bujairi.price
+
+      let image1 = document.getElementById("img3")
+      image1.src = bujairi.barcode
+
+      let image2 = document.getElementById("img10")
+      image2.src = bujairi.placeImg
+
+      let desc = document.getElementById("longDesc")
+      desc.innerText = bujairi.longDesc
+
+      
+
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+            // Handle any errors that occur during the request
+        });
+
+        
+  document.getElementById("submitBtn").addEventListener("click", function() {
+    var comments = document.getElementById("comments")
+    var rate = document.getElementById("rate")
+
+    // Send POST request to MockAPI
+    fetch("https://6557b617bd4bcef8b61317c2.mockapi.io/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        comments: comments.value,
+        rate: rate.value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Data added successfully:", data);
+        document.getElementById("displayComments").textContent = data.comments;
+        document.getElementById("displayRate").textContent = data.rate;
+        comments.value = "";
+        rate.value = "";
+    
+      
+
+        var rateValue = parseInt(data.rate);
+        var starImage = document.getElementById("starImage");
+
+        if (rateValue >= 1 && rateValue <= 5) {
+          starImage.src = "star-" + rateValue + ".png";
+        } else {
+          // Handle invalid rate values
+          starImage.src = "default-star.png";
+        }
+      })
+      .catch((error) => {
+        console.error("Error adding data:", error);
+        // Handle any errors that occur during the request
+      });
+  })
+
+  </script>
 </html>
