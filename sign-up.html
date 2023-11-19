@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
 </head>
 
 
@@ -22,11 +24,14 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+                </li>
+
+
                 <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
               </li>
@@ -64,25 +69,27 @@
 
                     <div class="mb-3" style="color: #057D8B;">
                         <label for="exampleInputEmail1" class="form-label">اسم المستخدم</label>
-                        <input type="username" class="form-control" id="exampleInputusername">
+                        <input type="username" class="form-control" id="name">
                       </div>
 
                     <div class="mb-3" style="color: #057D8B;">
                       <label for="exampleInputEmail1" class="form-label">البريد الالكتروني</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3" style="color: #057D8B;">
                       <label for="exampleInputPassword1" class="form-label">كلمة المرور </label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="password" class="form-control" id="password">
                     </div>
                     
                   
 
                     <div class="sign-in-btn">
-                    <button type="submit"  class="btn btn-primary btn-m  mt-3 " style="width: 9vw; background-color: rgba(5, 125, 139,0.8);border: none; ">
-                        <a class="sign-up-btn" href="index.html" style="color: rgb(240, 238, 238);">تسجيل</a>
-                    </button>
+                    <!-- <button id="btn" type="submit"  class="btn btn-primary btn-m  mt-3 "  style="width: 9vw; background-color: rgba(5, 125, 139,0.8);border: none; "> -->
+                      <!-- تسجيل -->
+                        <!-- <a class="sign-up-btn" href="index.html" style="color: rgb(240, 238, 238);">تسجيل</a> -->
+                    <!-- </button> -->
+                    <button id="btn"  type="button" class="btn btn-primary btn-m  mt-3 "  style="width: 9vw; background-color: rgba(5, 125, 139,0.8);border: none;">تسجيل</button>
                     </div>
                   </form>
 
@@ -106,5 +113,69 @@
 </div>
 <!-- End footer -->
 
+
+
 </body>
+<script>
+  document.getElementById("btn").addEventListener("click", () => {
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+
+    let nameValid = /^[A-Za-z]{5,}$/;
+    let emailValid =
+      /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    let passwordValid = /^\d{6,}$/;
+
+    if (name.value === "" || email.value === "" || password.value === "") {
+      Swal.fire({
+title: "Error",
+text: "Input is empty",
+icon: "error",
+confirmButtonText: "OK",
+});  
+   
+      // alert("input in empty");
+    } else if (!nameValid.test(name.value)) {
+      // alert("name is only character and more than 5");
+      Swal.fire({
+title: "Error",
+text: "Name should only contain characters and be at least 5 characters long",
+icon: "error",
+confirmButtonText: "OK",
+});
+
+    } else if (!email.value.match(emailValid)) {
+      // alert("email is invalled");
+      Swal.fire({
+title: "Error",
+text: "Invalid email format",
+icon: "error",
+confirmButtonText: "OK",
+});
+    } else if (!password.value.match(passwordValid)) {
+      // alert("password is only number and more than 6");
+      Swal.fire({
+title: "Error",
+text: "Password should only contain numbers and be at least 6 characters long",
+icon: "error",
+confirmButtonText: "OK",
+});
+    } else {
+      fetch("https://655746efbd4bcef8b6125e9f.mockapi.io/regisert", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name.value,
+          email: email.value,
+          password: password.value,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => (window.location.href = "index.html"));
+    }
+  });
+</script>
 </html>
