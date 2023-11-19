@@ -405,13 +405,14 @@ border: none;
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" onclick="logOut()" >تسجيل خروج</a>
+              </li>
 
               <li class="nav-item">
                 <a class="nav-link active " aria-current="page" href="register.html" >التسجيل / تسجيل الدخول</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="guide.html">الدليل</a>
               </li>
@@ -705,6 +706,11 @@ fetch("https://65562d2d84b36e3a431f4985.mockapi.io/riyadhGuide")
         // Handle any errors that occur during the request
       });
   })
+
+  function logOut(){
+  localStorage.removeItem("User");
+}
+
 
   </script>
 </html>
